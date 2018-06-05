@@ -1,0 +1,23 @@
+# Conda metadata description
+package:
+    name: msisensor
+    version: "0.2.0"
+
+source: 
+    git_rev: 0.2
+    git_url: https://github.com/ding-lab/msisensor.git
+
+requirements:
+    build:
+        - make
+        - gcc
+        - zlib
+        - samtools==0.1.19
+
+    run:
+        - zlib
+        - samtools==0.1.19
+
+test:
+    commands:
+        - msisensor msi --help

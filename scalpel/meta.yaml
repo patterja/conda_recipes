@@ -1,0 +1,25 @@
+# Conda metadata description
+package:
+    name: scalpel
+    version: "0.5.4"
+
+source: 
+    fn: scalpel-0.5.4.tar.gz
+    url: https://sourceforge.net/projects/scalpel/files/scalpel-0.5.4.tar.gz
+
+requirements:
+    build:
+        - cmake
+        - perl=5.26.2
+
+    run:
+        - perl=5.26.2
+
+test:
+#    commands:
+#        - scalpel-discovery --help
+
+about:
+    home: http://scalpel.sourceforge.net/
+    license: MIT
+    summary: Sensitive detection of INDELs (INsertions and DELetions)
