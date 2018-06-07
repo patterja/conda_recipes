@@ -7,12 +7,25 @@ source:
     fn: scalpel-0.5.4.tar.gz
     url: https://sourceforge.net/projects/scalpel/files/scalpel-0.5.4.tar.gz
 
+build:
+    detect_binary_files_with_prefix: True
+    binary_has_prefix_files:
+        - bin/bamtools-2.3.0/bin/bamtools-2.3.0
+        - bin/bamtools-2.3.0/lib/bamtools/libbamtools.so.2.3.0
+        - bin/bamtools-2.3.0/lib/bamtools/libbamtools.a
+
 requirements:
     build:
+        - bzip2
+        - zlib
         - cmake
-        - perl=5.26.2
+        - gcc
+        - ncurses 5.9.0
+        - perl 5.26.2
 
     run:
+        - zlib 
+        - libgcc
         - perl=5.26.2
 
 test:
