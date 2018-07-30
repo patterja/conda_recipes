@@ -1,10 +1,5 @@
+#!/bin/bash
 # Conda package build script
-
-export CPLUS_INCLUDE_PATH=${PREFIX}/bin/bamtools-2.3.0/include
-export LIBRARY_PATH=${PREFIX}/bin/bamtools-2.3.0/bamtools-2.3.0/lib
-export CXX="g++"
-export CXXFLAGS="-Wno-deprecated -Wall -O3 -fexceptions -g -Wl,-rpath,${PREFIX}/bin/bamtools-2.3.0/lib/bamtools"
-export INCLUDES="-I${PREFIX}bin/bamtools-2.3.0/include/bamtools -L${PREFIX}/bin/bamtools-2.3.0/lib/bamtools"
 
 #install bamtools
 rm -rf bamtools-2.3.0
@@ -31,13 +26,12 @@ cd Microassembler
 g++ -std=c++0x -Wno-deprecated -Wall -O3 -fexceptions -Wl,-rpath,${PREFIX}/bin/bamtools-2.3.0/lib/bamtools/ -I${PREFIX}/bin/bamtools-2.3.0/include/bamtools/ -L${PREFIX}/bin/bamtools-2.3.0/lib/bamtools/ Microassembler.cc Edge.cc Node.cc Graph.cc Path.cc ContigLink.cc align.cc util.cc -o Microassembler -lbamtools -lz
 cd ../
 
-#Move perl libs
+#Move bin and perl libs
+mkdir -p $PREFIX/bin
 cp *.pm $PREFIX/bin/
 cp -r MLDBM $PREFIX/bin
 cp -r Parallel $PREFIX/bin
 cp -r Text $PREFIX/bin
-
-mkdir -p $PREFIX/bin
 cp scalpel* $PREFIX/bin/
 cp *.pl $PREFIX/bin/
 

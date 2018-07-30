@@ -8,11 +8,12 @@ source:
     url: https://sourceforge.net/projects/scalpel/files/scalpel-0.5.4.tar.gz
 
 build:
+    binary_relocation: True
     detect_binary_files_with_prefix: True
-    binary_has_prefix_files:
-        - bin/bamtools-2.3.0/bin/bamtools-2.3.0
-        - bin/bamtools-2.3.0/lib/bamtools/libbamtools.so.2.3.0
-        - bin/bamtools-2.3.0/lib/bamtools/libbamtools.a
+#    binary_has_prefix_files:
+#        - bin/bamtools-2.3.0/bin/bamtools-2.3.0
+#        - bin/bamtools-2.3.0/lib/bamtools/libbamtools.so.2.3.0
+#        - bin/bamtools-2.3.0/lib/bamtools/libbamtools.a
 
 requirements:
     build:
@@ -20,13 +21,13 @@ requirements:
         - zlib
         - cmake
         - gcc
-        - ncurses 5.9.0
-        - perl 5.26.2
+        - ncurses 5.9
+        - perl 5.22.2.*
 
     run:
         - zlib 
         - libgcc
-        - perl=5.26.2
+        - perl 5.22.2.*
 
 test:
 #    commands:
