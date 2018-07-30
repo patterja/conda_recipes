@@ -1,0 +1,30 @@
+package:
+  name: star-fusion
+  version: "0.5.4"
+
+source:
+  fn: STAR-Fusion_v0.5.4.FULL.tar.gz
+  url: https://github.com/STAR-Fusion/STAR-Fusion/releases/download/v0.5.4/STAR-Fusion_v0.5.4.FULL.tar.gz
+
+requirements:
+  build:
+
+
+  run:
+      - blast
+      - perl-threaded
+      - perl-set-intervaltree
+      - perl-db-file
+      - perl-uri
+      - star
+      - gmap
+      - bowtie
+
+test:
+  commands:
+      - STAR-Fusion --help
+
+about:
+  home: https://github.com/STAR-Fusion/STAR-Fusion
+  license: MIT
+  summary: A fusion gene caller for STAR. The FusionFilter tools to create needed index data structures are not included.
