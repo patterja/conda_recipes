@@ -1,0 +1,23 @@
+package:
+  name: bam-matcher
+  version: "3b4e0f7"
+
+source:
+  git_url: https://bitbucket.org/sacgf/bam-matcher.git
+
+requirements:
+  run:
+    - python=2.7
+    - PyVCF
+    - ConfigParser
+    - Cheetah
+    - pysam
+    - numpy
+    - fisher
+
+test:
+
+about:
+  home: https://bitbucket.org/sacgf/bam-matcher/src/master/
+  license:
+  summary: A simple tool for determining whether two BAM files contain reads sequenced from the same sample or patient by counting genotype matches at common SNPs.
