@@ -1,6 +1,5 @@
 #!/bin/bash
 
-pip install --index-url https://test.pypi.org/simple/ dryad
-
-mkdir -p $PREFIX/bin
-cp * $PREFIX/bin
+python install setup.py
+#mkdir -p $PREFIX/bin
+#cp * $PREFIX/bin
