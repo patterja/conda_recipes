@@ -1,6 +1,6 @@
 # Conda metadata description for count.spikes
 package:
-        name: remove.spikes
+        name: count.spikes
         version: "1.0.0"
 
 source:
