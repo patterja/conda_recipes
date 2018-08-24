@@ -1,0 +1,26 @@
+# Conda metadata description for remove.spikes
+package:
+        name: remove.spikes
+        version: "1.0.0"
+
+source:
+        git_url: https://github.com/ohsu-comp-bio/tcr_sequencing_tools.git
+
+build:
+  rpaths:
+    - lib/R/lib/
+    - lib/
+
+requirements:
+        build:
+            - r=3.4.1
+
+        run:
+            - r=3.4.1
+            - bioconductor-shortread=1.36.0
+            - r-optparse=1.6.0
+
+test:
+        commands:
+            - count.spikes.R --help
+
