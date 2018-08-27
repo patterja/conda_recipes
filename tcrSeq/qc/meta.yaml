@@ -25,5 +25,5 @@ requirements:
 test:
         commands:
             - galaxy.qc.R --help
-	    - aggregate.qc.R --help
+            - aggregate.qc.R --help
 
