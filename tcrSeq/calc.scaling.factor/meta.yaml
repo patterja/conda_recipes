@@ -22,5 +22,5 @@ requirements:
 
 test:
         commands:
-            - calc.scaling.factor.R --help
+            - calculate.scaling.factor.R --help
 
