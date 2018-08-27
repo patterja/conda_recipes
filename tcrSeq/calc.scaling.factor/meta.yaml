@@ -18,7 +18,7 @@ requirements:
         run:
             - r=3.4.1
             - r-optparse=1.6.0
-	    - r-data.table=1.10.4
+            - r-data.table=1.10.4
 
 test:
         commands:
