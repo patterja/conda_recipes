@@ -1,0 +1,26 @@
+# Conda metadata description for calc.scaling.factor
+package:
+        name: calc.scaling.factor
+        version: "1.0.0"
+
+source:
+        git_url: https://github.com/ohsu-comp-bio/tcr_sequencing_tools.git
+
+build:
+  rpaths:
+    - lib/R/lib/
+    - lib/
+
+requirements:
+        build:
+            - r=3.4.1
+
+        run:
+            - r=3.4.1
+            - r-optparse=1.6.0
+	    - r-data.table=1.10.4
+
+test:
+        commands:
+            - calc.scaling.factor.R --help
+
