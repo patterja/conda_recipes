@@ -13,17 +13,16 @@ build:
 
 requirements:
         build:
-            - r=3.4.1
+            - r=3.3.2
 
         run:
-            - r=3.4.1
-            - r-optparse=1.6.0
-            - r-data.table=1.10.4
-            - bioconductor-shortread=1.36.0
-            - r-xlsx=0.5.7
+            - r=3.3.2
+            - r-optparse=1.4.4=r3.3.2_0
+            - r-data.table=1.10.4=r3.3.2_0
+            - bioconductor-shortread=1.32.0=r3.3.2_0
+            - r-openxlsx=4.0.17=r3.3.2_0
 
 test:
         commands:
-            - galaxy.qc.R --help
             - aggregate.qc.R --help
-
+            - galaxy.qc.R --help
