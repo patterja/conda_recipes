@@ -1,0 +1,23 @@
+# Conda metadata description for aggregate.qc
+package:
+        name: tcr.aggregate.qc
+        version: "1.0.0"
+
+source:
+        git_url: https://github.com/ohsu-comp-bio/tcr_sequencing_tools.git
+
+build:
+  rpaths:
+    - lib/R/lib/
+    - lib/
+
+requirements:
+        build:
+            - r=3.4.1
+
+        run:
+            - r=3.4.1
+            - r-optparse=1.4.4
+            - r-openxlsx=4.0.17
+            - r-data.table=1.10.4
+
