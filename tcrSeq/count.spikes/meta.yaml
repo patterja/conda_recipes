@@ -19,6 +19,8 @@ requirements:
             - r=3.4.1
             - bioconductor-shortread=1.36.0
             - r-optparse=1.6.0
+            - bioconductor-genomeinfodb=1.14.0
+            - bioconductor-genomeinfodbdata=1.0.0
 
 test:
         commands:
