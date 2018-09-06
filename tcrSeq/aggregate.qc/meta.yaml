@@ -20,4 +20,5 @@ requirements:
             - r-optparse=1.4.4
             - r-openxlsx=4.0.17
             - r-data.table=1.10.4
+            - r-rtools=3.4.0
 

@@ -1,6 +1,6 @@
 # Conda metadata description for count.spikes
 package:
-        name: count.spikes.centos
+        name: count.spikes
         version: "1.0.0"
 
 source:
@@ -21,4 +21,3 @@ requirements:
             - r-optparse=1.6.0
             - bioconductor-genomeinfodb=1.14.0
             - bioconductor-genomeinfodbdata=1.0.0=r3.4.1_1
-
