@@ -19,3 +19,8 @@ requirements:
             - r=3.4.1
             - r-data.table=1.10.4
             - r-tcr=2.2.1.11
+
+test:
+        commands:
+            - analysis.R --help
+            - multiBatchDiversityAnalysis.R --help
