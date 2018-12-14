@@ -1,0 +1,22 @@
+# Conda metadata description for galaxy.qc
+package:
+        name: tcr.galaxy.qc
+        version: "1.0.0"
+
+source:
+        git_url: https://github.com/ohsu-comp-bio/tcr_sequencing_tools.git
+
+build:
+  rpaths:
+    - lib/R/lib/
+    - lib/
+
+requirements:
+        build:
+            - r=3.4.1
+
+        run:
+            - r=3.4.1
+            - r-optparse=1.4.4
+            - bioconductor-shortread=1.36.0
+
