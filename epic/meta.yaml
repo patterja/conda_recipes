@@ -1,0 +1,34 @@
+package:
+  name: epic
+  version: v1.1
+
+source:
+  url: https://github.com/GfellerLab/EPIC/archive/v1.1.tar.gz
+  path: ./epic.R
+
+build:
+  rpaths:
+    - lib/
+    - lib/R/lib/
+
+requirements:
+  build:
+    - r-base
+    - r-ggplot2
+    - r-reshape2
+    - r-argparse
+    - readline
+
+  run:
+    - r-base
+    - r-ggplot2
+    - r-reshape2
+    - r-argparse
+    - readline
+
+test:
+  commands:
+
+about:
+  home: https://github.com/GfellerLab/EPIC
+  summary: EPIC is a method to estimate the proportion of immune, stromal, endothelial and cancer or other cells from bulk gene expression data.
