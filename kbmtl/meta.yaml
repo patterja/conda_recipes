@@ -6,6 +6,7 @@ package:
 
 source:
   url: https://github.com/patterja/kbmtl/archive/v0.1.0.tar.gz
+  sha256: db092ab6e750b07f122a52ea3f02794c6700d16d7682b951ec3d896d08b57e6c
   #git_url: https://github.com/patterja/kbmtl
 
 build:
